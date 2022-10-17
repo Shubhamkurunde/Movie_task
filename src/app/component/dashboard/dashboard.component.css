@@ -1,0 +1,17 @@
+*{
+    overflow: hidden;
+}
+
+.height{
+    max-height: 2000px;
+}
+
+.page{
+    display: flex;
+    align-items: flex-end;
+    z-index: 2;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}

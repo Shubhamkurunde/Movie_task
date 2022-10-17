@@ -9,13 +9,19 @@ import { StateService } from 'src/app/Services/state.service';
 })
 export class PopularMoviesComponent implements OnInit {
 
-  
-  constructor() { }
+  MostPopularMovies :any;
+  constructor(private dataservice:DataService, public state:StateService) { }
 
   ngOnInit(): void {
    
   }
 
- 
+MostPopular(){
+  this.dataservice.MostPopular().subscribe(res=>{
+    this.MostPopularMovies = res;
+  },err=>{
+    console.log(err);
+  })
+}
 
 }
